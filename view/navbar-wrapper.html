@@ -1,0 +1,78 @@
+<div id="menu-parent">
+    <a class="navbar-brand nav-barml-4" href="/">
+        <img alt="" src="./Velodata.png" width="50px" height="50px" class="d-inline-block align-center"
+            style="vertical-align: middle;">Velodata Discord Viewer</a>
+    <div id="menu">
+
+        <!-- <button id="btn-upload-file" class="hide-embedded">Load File</button> -->
+
+        <!-- <div class="splitter hide-embedded"></div> -->
+
+        <button id="btn-settings" title="Not in operation at this time.">Settings</button>
+
+        <div class="splitter hide-embedded"></div>
+
+        <!-- <div>
+            <select id="opt-messages-per-page">
+                <option value="50">50 messages per page&nbsp;</option>
+                <option value="100">100 messages per page&nbsp;</option>
+                <option value="250">250 messages per page&nbsp;</option>
+                <option value="500">500 messages per page&nbsp;</option>
+                <option value="1000">1000 messages per page&nbsp;</option>
+                <option value="0">All messages&nbsp;</option>
+            </select>
+        </div> -->
+
+
+        <div class="nav">
+            <!-- <button id="nav-first" data-nav="first" class="icon">&laquo;</button> -->
+            <button id="nav-first" data-nav="first" class="icon" onclick='$("#messages").animate({ scrollTop: 1 }, 10);'
+                title="Go to the first post.">First</button>
+            <button id="nav-prev" data-nav="prev" class="icon"
+                onclick="$('#messages').animate({scrollTop: '-=10000px'}, 10);"
+                title="Scroll backwards 100 posts.">&lsaquo;</button>
+            <button id="nav-pick" data-nav="pick">Page <span id="nav-page-current">1</span>/<span
+                    id="nav-page-total">?</span></button>
+            <button id="nav-next" data-nav="next" class="icon"
+                onclick="$('#messages').animate({scrollTop: '+=10000px'}, 10);"
+                title="Scroll forward 100 posts.">&rsaquo;</button>
+            <!-- <button id="nav-last" data-nav="last" class="icon">&raquo;</button> -->
+            <button id="nav-last" data-nav="last" class="icon"
+                onclick='$("#messages").animate({ scrollTop: 500000 }, 10);' title="Go to the last post.">Last</button>
+        </div>
+
+        <div class="splitter"></div>
+
+        <div>
+            <!-- needed to stop the select from messing up -->
+            <select id="opt-messages-filter" title="Not in operation at this time.">
+                <option value="">No filter&nbsp;</option>
+                <option value="user">Filter messages by user&nbsp;</option>
+                <option value="contents">Filter messages by contents&nbsp;</option>
+                <option value="withimages">Only messages with images&nbsp;</option>
+                <option value="withdownloads">Only messages with downloads&nbsp;</option>
+                <option value="edited">Only edited messages&nbsp;</option>
+            </select>
+        </div>
+
+        <div id="opt-filter-list">
+            <select id="opt-filter-user" data-filter-type="user">
+                <option value="">Select user...</option>
+            </select>
+            <input id="opt-filter-contents" type="text" data-filter-type="contents"
+                placeholder="Messages containing...">
+            <input type="hidden" data-filter-type="withimages" value="1">
+            <input type="hidden" data-filter-type="withdownloads" value="1">
+            <input type="hidden" data-filter-type="edited" value="1">
+        </div>
+
+        <div id="opt-save-filtered">
+            <div class="splitter"></div>
+            <button id="btn-save-filtered">Save Filtered Messages</button>
+        </div>
+
+        <div class="separator"></div>
+
+    </div>
+    <button id="btn-about">About</button>
+</div>

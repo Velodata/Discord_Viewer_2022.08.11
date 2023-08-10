@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Velodata Discord Viewer</title>
+
+
+    <link rel="stylesheet" href="/assets/css/40532.d5ac429defc661feb463.css">
+    <link rel="stylesheet" href="/assets/css/discord_viewer.css?v=6">
+    <link rel="stylesheet" href="/assets/css/Wiggle.iosOverlay.css?v=6">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="assets/js/jquery-1.12.0.min.js"></script>
+    <script src="assets/js/jquery-ui-1.13.2.js"></script>
+    <script src="assets/js/discord_viewer.js?v=7"></script>
+    <script src="assets/js/Wiggle.iosOverlay.js?v=7"></script>
+    <script src="assets/js/Wiggle.iosOverlay.spin.min.js?v=7"></script>
+    <script src="assets/js/Wiggle.iosOverlay.Handler.js?v=7"></script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+</head>
+
+
+
+
+
+
+<body>
+    <div id="iosLoadingContainer" style="display: none;">
+
+        <button id="iosLoadtoSuccess" class="btn">Loading Spinner then Success Symbol</button><br>
+        <button id="iosLoading" class="btn">Loading Spinner</button><br>
+        <button id="iosCheckMark" class="btn">Success</button><br>
+        <button id="iosCross" class="btn">Error</button><br>
+
+    </div>
+    <div id="navbar"></div>
+
+    <div id="app">
+        <div id="channels"></div>
+        <div id="messages"></div>
+
+        <div id="modal">
+            <div id="overlay"></div>
+            <div id="dialog"></div>
+        </div>
+    </div>
+</body>
+
+</html>
